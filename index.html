@@ -360,14 +360,14 @@
 // ── MÚSICA ──
 var bgMusic = new Audio('music.mp3');
 bgMusic.loop = true;
-bgMusic.volume = 0.1;
+bgMusic.volume = 0.01;
 var musicStarted = false;
 
 function startMusic(vol) {
   if (musicStarted) return;
   musicStarted = true;
   if (typeof vol !== 'undefined' && vol > 0) {
-    bgMusic.volume = Math.min(vol, 0.6);
+    bgMusic.volume = Math.min(vol, 0.3);
   }
   bgMusic.play().catch(function() {});
 }
