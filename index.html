@@ -367,7 +367,7 @@ function startMusic(vol) {
   if (musicStarted) return;
   musicStarted = true;
   if (typeof vol !== 'undefined' && vol > 0) {
-    bgMusic.volume = Math.min(vol, 0.3);
+    bgMusic.volume = Math.min(vol, 0.1);
   }
   bgMusic.play().catch(function() {});
 }
